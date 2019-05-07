@@ -11,4 +11,4 @@ phases:
       - echo ${sshkey} > ~/.ssh/sshkey.pem
       - chmod 400 ~/.ssh/sshkey.pem
       - ssh-keyscan -H ec2-3-83-230-91.compute-1.amazonaws.com >> ~/.ssh/known_hosts
-      - ssh -i  ~/.ssh/sshkey.pem ec2-user@ec2-3-83-230-91.compute-1.amazonaws.com 'uptime'
+      - scp -i  ~/.ssh/sshkey.pem ./test.txt ec2-user@ec2-3-83-230-91.compute-1.amazonaws.com:/home/ec2-user/.local/lib/python2.7/site-packages/airflow/example_dags/
