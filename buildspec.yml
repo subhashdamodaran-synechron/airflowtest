@@ -1,0 +1,10 @@
+version: 0.1
+
+phases:
+  # pre_build:
+  #   commands:
+  #     - if [ "$IS_CI" = "true" ]; then echo $CODEBUILD_SOURCE_VERSION > git_commit_id; else chmod +x ./version_stamp.sh && ./version_stamp.sh; fi
+  #     - npm install
+  build:
+    commands:
+      - echo 'Making data files'
